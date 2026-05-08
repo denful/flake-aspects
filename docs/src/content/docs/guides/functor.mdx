@@ -34,7 +34,7 @@ When resolved for `"nixos"`, it returns the full aspect (with `nixos.base = true
 When resolved for `"darwin"`, it returns a different aspect with `darwin.fallback = true`.
 
 <Aside>
-  Test: [`aspect_default_provider_functor.nix`](https://github.com/vic/flake-aspects/blob/main/checkmate/modules/tests/aspect_default_provider_functor.nix)
+  Test: [`aspect_default_provider_functor.nix`](https://github.com/denful/flake-aspects/blob/main/checkmate/modules/tests/aspect_default_provider_functor.nix)
 </Aside>
 
 ## Functor with parametric includes
@@ -63,5 +63,5 @@ Note: when `__functor` is overridden, the aspect's own class configs (e.g., `cla
 are **not** automatically included — the functor's return value replaces the aspect entirely during resolution.
 
 <Aside>
-  Test: [`aspect_default_provider_override.nix`](https://github.com/vic/flake-aspects/blob/main/checkmate/modules/tests/aspect_default_provider_override.nix) — demonstrates that functor return replaces the original aspect config.
+  Test: [`aspect_default_provider_override.nix`](https://github.com/denful/flake-aspects/blob/main/checkmate/modules/tests/aspect_default_provider_override.nix) — demonstrates that functor return replaces the original aspect config.
 </Aside>

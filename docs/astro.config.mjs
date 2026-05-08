@@ -80,7 +80,7 @@ export default defineConfig({
 				}),
 			],
 			editLink: {
-				baseUrl: 'https://github.com/vic/flake-aspects/edit/main/docs/',
+				baseUrl: 'https://github.com/denful/flake-aspects/edit/main/docs/',
 			},
 			customCss: [
 				'./src/styles/custom.css'

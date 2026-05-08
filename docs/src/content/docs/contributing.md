@@ -8,13 +8,13 @@ All contributions welcome. PRs are checked by CI.
 ## Run tests
 
 ```shell
-nix flake check github:vic/checkmate --override-input target . -L
+nix flake check github:denful/checkmate --override-input target . -L
 ```
 
 ## Format code
 
 ```shell
-nix run github:vic/checkmate#fmt --override-input target .
+nix run github:denful/checkmate#fmt --override-input target .
 ```
 
 ## Bug reports
@@ -33,5 +33,5 @@ cd docs && pnpm install && pnpm run dev
 
 ## Community
 
-- [GitHub Issues](https://github.com/vic/flake-aspects/issues) — bugs and features
-- [GitHub Discussions](https://github.com/vic/flake-aspects/discussions) — questions and ideas
+- [GitHub Issues](https://github.com/denful/flake-aspects/issues) — bugs and features
+- [GitHub Discussions](https://github.com/denful/flake-aspects/discussions) — questions and ideas

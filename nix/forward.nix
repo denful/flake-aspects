@@ -16,7 +16,7 @@
 # This is particularly useful for per-user homeManager like
 # configurations.
 #
-# The following pseudo-code snippet is used by [den](https://github.com/vic/den)
+# The following pseudo-code snippet is used by [den](https://github.com/denful/den)
 # to support homeManager classes on NixOS.
 #
 #   hmSupport = { host }: forward {

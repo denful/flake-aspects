@@ -24,7 +24,7 @@ flake.aspects = { aspects, ... }: {
 Resolving `server` for `"nixos"` produces imports containing `{ users.users.bob.isNormalUser = true; }`.
 
 <Aside>
-  Test: [`aspect_parametric.nix`](https://github.com/vic/flake-aspects/blob/main/checkmate/modules/tests/aspect_parametric.nix)
+  Test: [`aspect_parametric.nix`](https://github.com/denful/flake-aspects/blob/main/checkmate/modules/tests/aspect_parametric.nix)
 </Aside>
 
 ## Top-level parametric
@@ -43,14 +43,14 @@ flake.aspects = { aspects, ... }: {
 };
 ```
 
-The type system ([`nix/types.nix`](https://github.com/vic/flake-aspects/blob/main/nix/types.nix)) distinguishes between:
+The type system ([`nix/types.nix`](https://github.com/denful/flake-aspects/blob/main/nix/types.nix)) distinguishes between:
 - **Direct providers**: `{ class, aspect-chain } → aspect` (1-2 named args: `class` and/or `aspect-chain`)
 - **Curried providers**: `anything → provider` (other function signatures)
 
 A curried provider is invoked by the user at inclusion time. Its return value must be either another provider function or a direct aspect attrset.
 
 <Aside>
-  Test: [`aspect_toplevel_parametric.nix`](https://github.com/vic/flake-aspects/blob/main/checkmate/modules/tests/aspect_toplevel_parametric.nix)
+  Test: [`aspect_toplevel_parametric.nix`](https://github.com/denful/flake-aspects/blob/main/checkmate/modules/tests/aspect_toplevel_parametric.nix)
 </Aside>
 
 ## Combining with context
