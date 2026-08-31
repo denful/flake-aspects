@@ -11,7 +11,7 @@ Add `flake-aspects` to your flake inputs and import its `flakeModule`:
 
 ```nix
 {
-  inputs.flake-aspects.url = "github:vic/flake-aspects";
+  inputs.flake-aspects.url = "github:denful/flake-aspects";
 
   outputs = { flake-parts, flake-aspects, nixpkgs, ... }@inputs:
     flake-parts.lib.mkFlake { inherit inputs; } {
@@ -38,7 +38,7 @@ Add `flake-aspects` to your flake inputs and import its `flakeModule`:
 
 ## How it works
 
-The [`flakeModule`](https://github.com/vic/flake-aspects/blob/main/nix/flakeModule.nix) calls [`new`](/reference/api/#new) with a callback that:
+The [`flakeModule`](https://github.com/denful/flake-aspects/blob/main/nix/flakeModule.nix) calls [`new`](/reference/api/#new) with a callback that:
 
 1. Creates `flake.aspects` as a user-facing option (type: `aspectsType`).
 2. Sets `flake.modules` to the transposed + resolved output.
@@ -59,8 +59,8 @@ imports = [
 Then in your system configs: `inputs.self.modules.nixos.my-desktop`.
 
 <Aside>
-  Test: [`tranpose_flake_modules.nix`](https://github.com/vic/flake-aspects/blob/main/checkmate/modules/tests/tranpose_flake_modules.nix) ·
-  [`default_empty.nix`](https://github.com/vic/flake-aspects/blob/main/checkmate/modules/tests/default_empty.nix)
+  Test: [`tranpose_flake_modules.nix`](https://github.com/denful/flake-aspects/blob/main/checkmate/modules/tests/tranpose_flake_modules.nix) ·
+  [`default_empty.nix`](https://github.com/denful/flake-aspects/blob/main/checkmate/modules/tests/default_empty.nix)
 </Aside>
 
 ## Using dependencies

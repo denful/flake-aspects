@@ -33,7 +33,7 @@ provides.logging = { class, aspect-chain }: {
 ```
 
 <Aside>
-  Test: [`aspect_provides.nix`](https://github.com/vic/flake-aspects/blob/main/checkmate/modules/tests/aspect_provides.nix)
+  Test: [`aspect_provides.nix`](https://github.com/denful/flake-aspects/blob/main/checkmate/modules/tests/aspect_provides.nix)
 </Aside>
 
 ## Fixpoint semantics
@@ -60,15 +60,15 @@ flake.aspects = { aspects, ... }: {
 };
 ```
 
-The fixpoint is implemented via `freeformType` with `_module.args.aspects = config` in [types.nix](https://github.com/vic/flake-aspects/blob/main/nix/types.nix), so `aspects` always refers to the evaluated sibling scope.
+The fixpoint is implemented via `freeformType` with `_module.args.aspects = config` in [types.nix](https://github.com/denful/flake-aspects/blob/main/nix/types.nix), so `aspects` always refers to the evaluated sibling scope.
 
 <Aside>
-  Test: [`aspect_fixpoint.nix`](https://github.com/vic/flake-aspects/blob/main/checkmate/modules/tests/aspect_fixpoint.nix) — resolves aspects from five levels: top-level `aspects.five`, provider-local `aspects.four`, and cross-scope `aspects.two._.sub`.
+  Test: [`aspect_fixpoint.nix`](https://github.com/denful/flake-aspects/blob/main/checkmate/modules/tests/aspect_fixpoint.nix) — resolves aspects from five levels: top-level `aspects.five`, provider-local `aspects.four`, and cross-scope `aspects.two._.sub`.
 </Aside>
 
 ## Provider types
 
-The type system ([`nix/types.nix`](https://github.com/vic/flake-aspects/blob/main/nix/types.nix)) accepts several provider shapes:
+The type system ([`nix/types.nix`](https://github.com/denful/flake-aspects/blob/main/nix/types.nix)) accepts several provider shapes:
 
 | Shape | Description |
 |---|---|

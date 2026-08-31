@@ -26,11 +26,11 @@ Usage: `flake-aspects.lib nixpkgs.lib` or `import ./nix/lib.nix lib`.
 
 ## Exports
 
-Source: [`nix/lib.nix`](https://github.com/vic/flake-aspects/blob/main/nix/lib.nix)
+Source: [`nix/lib.nix`](https://github.com/denful/flake-aspects/blob/main/nix/lib.nix)
 
 ### `transpose { emit? }`
 
-Source: [`nix/default.nix`](https://github.com/vic/flake-aspects/blob/main/nix/default.nix)
+Source: [`nix/default.nix`](https://github.com/denful/flake-aspects/blob/main/nix/default.nix)
 
 Generic 2-level transposition. Returns a function `attrs → transposed-attrs`.
 
@@ -42,7 +42,7 @@ See [Transpose concept](/concepts/transpose/).
 
 ### `types`
 
-Source: [`nix/types.nix`](https://github.com/vic/flake-aspects/blob/main/nix/types.nix)
+Source: [`nix/types.nix`](https://github.com/denful/flake-aspects/blob/main/nix/types.nix)
 
 Returns `{ aspectsType, aspectSubmodule, providerType }`.
 
@@ -50,7 +50,7 @@ See [Type System reference](/reference/types/).
 
 ### `aspects`
 
-Source: [`nix/aspects.nix`](https://github.com/vic/flake-aspects/blob/main/nix/aspects.nix)
+Source: [`nix/aspects.nix`](https://github.com/denful/flake-aspects/blob/main/nix/aspects.nix)
 
 `aspects : lib → aspectsConfig → { transposed }`.
 
@@ -58,7 +58,7 @@ Aspect-aware transposition. Supplies a custom `emit` to `transpose` that calls `
 
 ### `new`
 
-Source: [`nix/new.nix`](https://github.com/vic/flake-aspects/blob/main/nix/new.nix)
+Source: [`nix/new.nix`](https://github.com/denful/flake-aspects/blob/main/nix/new.nix)
 
 `new : lib → (option → transposed → moduleDefinition) → aspectsConfig → moduleDefinition`.
 
@@ -68,7 +68,7 @@ Low-level scope factory. The callback receives:
 
 ### `new-scope`
 
-Source: [`nix/new-scope.nix`](https://github.com/vic/flake-aspects/blob/main/nix/new-scope.nix)
+Source: [`nix/new-scope.nix`](https://github.com/denful/flake-aspects/blob/main/nix/new-scope.nix)
 
 `new-scope : name → nixos-module`.
 
@@ -76,7 +76,7 @@ Creates `${name}.aspects` (input) and `${name}.modules` (read-only output). Suga
 
 ### `forward`
 
-Source: [`nix/forward.nix`](https://github.com/vic/flake-aspects/blob/main/nix/forward.nix)
+Source: [`nix/forward.nix`](https://github.com/denful/flake-aspects/blob/main/nix/forward.nix)
 
 `forward : lib → { each, fromClass, intoClass, intoPath, fromAspect } → aspect`.
 
@@ -84,6 +84,6 @@ Cross-class module forwarding. See [Forward guide](/guides/forward/).
 
 ## `flakeModule`
 
-Source: [`nix/flakeModule.nix`](https://github.com/vic/flake-aspects/blob/main/nix/flakeModule.nix)
+Source: [`nix/flakeModule.nix`](https://github.com/denful/flake-aspects/blob/main/nix/flakeModule.nix)
 
 A flake-parts module. Import it to get `flake.aspects` (input) → `flake.modules` (output). Uses `new` internally. See [flake-parts guide](/guides/flake-parts/).

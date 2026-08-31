@@ -7,7 +7,7 @@ import { Aside } from '@astrojs/starlight/components';
 
 ## Aspect structure
 
-Each aspect is a Nix submodule ([`nix/types.nix`](https://github.com/vic/flake-aspects/blob/main/nix/types.nix)) with:
+Each aspect is a Nix submodule ([`nix/types.nix`](https://github.com/denful/flake-aspects/blob/main/nix/types.nix)) with:
 
 | Attribute | Type | Purpose |
 |---|---|---|
@@ -37,7 +37,7 @@ Each key under the aspect that is not a reserved attribute (`name`, `description
 
 ## Resolution
 
-Source: [`nix/resolve.nix`](https://github.com/vic/flake-aspects/blob/main/nix/resolve.nix)
+Source: [`nix/resolve.nix`](https://github.com/denful/flake-aspects/blob/main/nix/resolve.nix)
 
 ```
 resolve : class → aspect-chain → provided → { imports }
@@ -77,8 +77,8 @@ provides.logging = { aspect-chain, class }:
 ```
 
 <Aside>
-  Tests: [`aspect_chain.nix`](https://github.com/vic/flake-aspects/blob/main/checkmate/modules/tests/aspect_chain.nix) ·
-  [`aspect_modules_resolved.nix`](https://github.com/vic/flake-aspects/blob/main/checkmate/modules/tests/aspect_modules_resolved.nix)
+  Tests: [`aspect_chain.nix`](https://github.com/denful/flake-aspects/blob/main/checkmate/modules/tests/aspect_chain.nix) ·
+  [`aspect_modules_resolved.nix`](https://github.com/denful/flake-aspects/blob/main/checkmate/modules/tests/aspect_modules_resolved.nix)
 </Aside>
 
 ## Accessing resolved modules

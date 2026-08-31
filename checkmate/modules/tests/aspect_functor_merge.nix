@@ -6,7 +6,7 @@
 # invoke all definitions and merge their results, causing duplication
 # when the functor uses `self` (the merged aspect) to produce includes.
 #
-# See https://github.com/vic/den/issues/216
+# See https://github.com/denful/den/issues/216
 { lib, new-scope, ... }:
 {
 

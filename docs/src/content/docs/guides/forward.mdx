@@ -7,7 +7,7 @@ import { Aside } from '@astrojs/starlight/components';
 
 ## What `forward` does
 
-[`forward`](https://github.com/vic/flake-aspects/blob/main/nix/forward.nix) resolves an aspect for one class and injects the result into a submodule path of another class. This enables cross-class configuration routing.
+[`forward`](https://github.com/denful/flake-aspects/blob/main/nix/forward.nix) resolves an aspect for one class and injects the result into a submodule path of another class. This enables cross-class configuration routing.
 
 The canonical use case: forward `homeManager` modules into `nixos.home-manager.users.<name>`.
 
@@ -65,12 +65,12 @@ flake.aspects = { aspects, ... }: {
 Resolving for `"targetClass"` merges `["from-target", "from-source"]`.
 
 <Aside>
-  Test: [`forward.nix`](https://github.com/vic/flake-aspects/blob/main/checkmate/modules/tests/forward.nix)
+  Test: [`forward.nix`](https://github.com/denful/flake-aspects/blob/main/checkmate/modules/tests/forward.nix)
 </Aside>
 
 ## Real-world: Home-Manager into NixOS
 
-This is how [Den](https://github.com/vic/den) forwards user home-manager configs into host NixOS:
+This is how [Den](https://github.com/denful/den) forwards user home-manager configs into host NixOS:
 
 ```nix
 hmSupport = { host }: forward {

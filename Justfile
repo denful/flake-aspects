@@ -5,10 +5,10 @@ docs:
   cd docs && pnpm run dev
 
 ci test="":
-  nix-unit  --override-input target . --flake github:vic/checkmate#.tests.systems.x86_64-linux.system-agnostic.{{test}}
+  nix-unit  --override-input target . --flake github:denful/checkmate#.tests.systems.x86_64-linux.system-agnostic.{{test}}
   
 check:
-  nix flake check  --override-input target . github:vic/checkmate
+  nix flake check  --override-input target . github:denful/checkmate
 
 fmt:
-  nix run github:vic/checkmate#fmt --override-input target .
+  nix run github:denful/checkmate#fmt --override-input target .

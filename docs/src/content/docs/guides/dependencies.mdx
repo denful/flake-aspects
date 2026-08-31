@@ -35,7 +35,7 @@ When `server` is resolved for class `"nixos"`, the result is:
 Only classes **present on the included aspect** propagate. If `networking` has no `darwin` key, nothing from `networking` appears when resolving for `"darwin"`.
 
 <Aside>
-  Test: [`aspect_dependencies.nix`](https://github.com/vic/flake-aspects/blob/main/checkmate/modules/tests/aspect_dependencies.nix)
+  Test: [`aspect_dependencies.nix`](https://github.com/denful/flake-aspects/blob/main/checkmate/modules/tests/aspect_dependencies.nix)
 </Aside>
 
 ## Transitive resolution
@@ -62,7 +62,7 @@ flake.aspects = { aspects, ... }: {
 Resolving `one` for `classOne` collects `["1", "2", "3", "4"]`.
 
 <Aside>
-  Test: [`aspect_fixpoint.nix`](https://github.com/vic/flake-aspects/blob/main/checkmate/modules/tests/aspect_fixpoint.nix) — tests five-level transitive resolution.
+  Test: [`aspect_fixpoint.nix`](https://github.com/denful/flake-aspects/blob/main/checkmate/modules/tests/aspect_fixpoint.nix) — tests five-level transitive resolution.
 </Aside>
 
 ## Inline aspects as includes

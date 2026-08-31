@@ -1,17 +1,17 @@
 <!-- Badges -->
 
 <p align="right">
-  <a href="https://dendritic.oeiuwq.com/sponsor"><img src="https://img.shields.io/badge/sponsor-vic-white?logo=githubsponsors&logoColor=white&labelColor=%23FF0000" alt="Sponsor Vic"/>
+  <a href="https://dendritic.oeiuwq.com/sponsor"><img src="https://img.shields.io/badge/sponsor-denful-white?logo=githubsponsors&logoColor=white&labelColor=%23FF0000" alt="Sponsor Vic"/>
   </a>
   <a href="https://dendritic.oeiuwq.com"> <img src="https://img.shields.io/badge/Dendritic-Nix-informational?logo=nixos&logoColor=white" alt="Dendritic Nix"/> </a>
-  <a href="https://github.com/vic/flake-aspects/actions">
-  <img src="https://github.com/vic/flake-aspects/actions/workflows/test.yml/badge.svg" alt="CI Status"/> </a>
-  <a href="LICENSE"> <img src="https://img.shields.io/github/license/vic/flake-aspects" alt="License"/> </a>
+  <a href="https://github.com/denful/flake-aspects/actions">
+  <img src="https://github.com/denful/flake-aspects/actions/workflows/test.yml/badge.svg" alt="CI Status"/> </a>
+  <a href="LICENSE"> <img src="https://img.shields.io/github/license/denful/flake-aspects" alt="License"/> </a>
 </p>
 
 # `<aspect>.<class>` Transposition for Dendritic Nix
 
-> `flake-aspects` and [vic](https://bsky.app/profile/oeiuwq.bsky.social)'s [dendritic libs](https://dendritic.oeiuwq.com) made for you with Love++ and AI--. If you like my work, consider [sponsoring](https://dendritic.oeiuwq.com/sponsor)
+> `flake-aspects` and [denful](https://bsky.app/profile/oeiuwq.bsky.social)'s [dendritic libs](https://dendritic.oeiuwq.com) made for you with Love++ and AI--. If you like my work, consider [sponsoring](https://dendritic.oeiuwq.com/sponsor)
 
 In [aspect-oriented](https://den.oeiuwq.com) [Dendritic](https://github.com/mightyiam/dendritic) setups, it is common to expose modules using the structure `flake.modules.<class>.<aspect>`.
 

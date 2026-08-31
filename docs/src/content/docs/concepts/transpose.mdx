@@ -22,11 +22,11 @@ transpose { a.x = 1; b.x = 2; }
 ```
 
 <Aside>
-  Tests: [`transpose_swap.nix`](https://github.com/vic/flake-aspects/blob/main/checkmate/modules/tests/transpose_swap.nix) ·
-  [`transpose_common.nix`](https://github.com/vic/flake-aspects/blob/main/checkmate/modules/tests/transpose_common.nix)
+  Tests: [`transpose_swap.nix`](https://github.com/denful/flake-aspects/blob/main/checkmate/modules/tests/transpose_swap.nix) ·
+  [`transpose_common.nix`](https://github.com/denful/flake-aspects/blob/main/checkmate/modules/tests/transpose_common.nix)
 </Aside>
 
-## Source: [`nix/default.nix`](https://github.com/vic/flake-aspects/blob/main/nix/default.nix)
+## Source: [`nix/default.nix`](https://github.com/denful/flake-aspects/blob/main/nix/default.nix)
 
 The implementation is a three-phase pipeline:
 
@@ -47,7 +47,7 @@ You can use `emit` to:
 
 ## How aspects exploit `emit`
 
-[`nix/aspects.nix`](https://github.com/vic/flake-aspects/blob/main/nix/aspects.nix) supplies a custom `emit` that calls [`resolve`](/concepts/aspects/#resolution) on each item:
+[`nix/aspects.nix`](https://github.com/denful/flake-aspects/blob/main/nix/aspects.nix) supplies a custom `emit` that calls [`resolve`](/concepts/aspects/#resolution) on each item:
 
 ```nix
 emit = transposed: [{
@@ -61,5 +61,5 @@ emit = transposed: [{
 This intercepts every `<aspect>.<class>` → `<class>.<aspect>` transposition and replaces the raw value with a fully-resolved module that includes all transitive dependencies.
 
 <Aside>
-  Test: [`tranpose_flake_modules.nix`](https://github.com/vic/flake-aspects/blob/main/checkmate/modules/tests/tranpose_flake_modules.nix)
+  Test: [`tranpose_flake_modules.nix`](https://github.com/denful/flake-aspects/blob/main/checkmate/modules/tests/tranpose_flake_modules.nix)
 </Aside>

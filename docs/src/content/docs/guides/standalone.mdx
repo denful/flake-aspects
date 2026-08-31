@@ -7,7 +7,7 @@ import { Aside } from '@astrojs/starlight/components';
 
 ## `new-scope` — named aspect namespaces
 
-[`new-scope`](https://github.com/vic/flake-aspects/blob/main/nix/new-scope.nix) creates an isolated aspect namespace within any `lib.evalModules` evaluation:
+[`new-scope`](https://github.com/denful/flake-aspects/blob/main/nix/new-scope.nix) creates an isolated aspect namespace within any `lib.evalModules` evaluation:
 
 ```nix
 let
@@ -34,7 +34,7 @@ in
 - `my.modules` — output: transposed + resolved modules (read-only)
 
 <Aside>
-  Test: [`without_flakes.nix`](https://github.com/vic/flake-aspects/blob/main/checkmate/modules/tests/without_flakes.nix)
+  Test: [`without_flakes.nix`](https://github.com/denful/flake-aspects/blob/main/checkmate/modules/tests/without_flakes.nix)
 </Aside>
 
 ## Multiple scopes
@@ -54,12 +54,12 @@ modules = [
 After merging, `bar.modules.nixos.a` contains both `"from-foo"` and `"from-bar"`.
 
 <Aside>
-  Test: [`aspect_assignment.nix`](https://github.com/vic/flake-aspects/blob/main/checkmate/modules/tests/aspect_assignment.nix)
+  Test: [`aspect_assignment.nix`](https://github.com/denful/flake-aspects/blob/main/checkmate/modules/tests/aspect_assignment.nix)
 </Aside>
 
 ## `new` — low-level factory
 
-[`new`](https://github.com/vic/flake-aspects/blob/main/nix/new.nix) is the callback-based primitive underneath `new-scope`:
+[`new`](https://github.com/denful/flake-aspects/blob/main/nix/new.nix) is the callback-based primitive underneath `new-scope`:
 
 ```nix
 new (option: transposed: {
@@ -70,4 +70,4 @@ new (option: transposed: {
 
 `new-scope` is sugar for the common `${name}.aspects` / `${name}.modules` pattern. Use `new` directly when you need custom option paths or additional logic in the callback.
 
-Useful for libraries that want isolated aspect scopes or flake-parts independence (see [Den's scope](https://github.com/vic/den/blob/main/nix/scope.nix)).
+Useful for libraries that want isolated aspect scopes or flake-parts independence (see [Den's scope](https://github.com/denful/den/blob/main/nix/scope.nix)).
